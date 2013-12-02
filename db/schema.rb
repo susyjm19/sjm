@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20131129130811) do
   end
 
   create_table "events", force: true do |t|
-    t.string   "name"
     t.datetime "activityDate"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -88,12 +87,12 @@ ActiveRecord::Schema.define(version: 20131129130811) do
   end
 
   create_table "oids", force: true do |t|
-    t.string   "oid"
     t.string   "name"
     t.text     "message"
     t.string   "priorityLevel"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "identifier",    limit: 30
   end
 
   create_table "panel_brands", force: true do |t|
@@ -124,6 +123,7 @@ ActiveRecord::Schema.define(version: 20131129130811) do
   create_table "port_panels", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "identifier"
   end
 
   create_table "port_types", force: true do |t|
@@ -141,9 +141,9 @@ ActiveRecord::Schema.define(version: 20131129130811) do
 
   create_table "rooms", force: true do |t|
     t.string   "name"
-    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category",   limit: 30
   end
 
   create_table "switch_ports", force: true do |t|
