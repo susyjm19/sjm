@@ -1,0 +1,25 @@
+<h1>Listing port_panels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @port_panels.each do |port_panel| %>
+      <tr>
+        <td><%= link_to 'Show', port_panel %></td>
+        <td><%= link_to 'Edit', edit_port_panel_path(port_panel) %></td>
+        <td><%= link_to 'Destroy', port_panel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Port panel', new_port_panel_path %>

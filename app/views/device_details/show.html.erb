@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Macaddress:</strong>
+  <%= @device_detail.macAddress %>
+</p>
+
+<p>
+  <strong>Ipaddress:</strong>
+  <%= @device_detail.ipAddress %>
+</p>
+
+<p>
+  <strong>Osversion:</strong>
+  <%= @device_detail.osVersion %>
+</p>
+
+<p>
+  <strong>Function:</strong>
+  <%= @device_detail.function %>
+</p>
+
+<%= link_to 'Edit', edit_device_detail_path(@device_detail) %> |
+<%= link_to 'Back', device_details_path %>

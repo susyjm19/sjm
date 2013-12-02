@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @switch_port.name %>
+</p>
+
+<p>
+  <strong>Macaddress:</strong>
+  <%= @switch_port.macAddress %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @switch_port.status %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @switch_port.description %>
+</p>
+
+<%= link_to 'Edit', edit_switch_port_path(@switch_port) %> |
+<%= link_to 'Back', switch_ports_path %>

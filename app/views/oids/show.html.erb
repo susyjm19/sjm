@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Oid:</strong>
+  <%= @oid.oid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @oid.name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @oid.message %>
+</p>
+
+<p>
+  <strong>Prioritylevel:</strong>
+  <%= @oid.priorityLevel %>
+</p>
+
+<%= link_to 'Edit', edit_oid_path(@oid) %> |
+<%= link_to 'Back', oids_path %>

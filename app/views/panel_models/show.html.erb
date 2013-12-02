@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @panel_model.name %>
+</p>
+
+<p>
+  <strong>Numberofport:</strong>
+  <%= @panel_model.numberOfPort %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @panel_model.category %>
+</p>
+
+<%= link_to 'Edit', edit_panel_model_path(@panel_model) %> |
+<%= link_to 'Back', panel_models_path %>

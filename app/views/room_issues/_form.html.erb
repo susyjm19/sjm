@@ -1,0 +1,21 @@
+<%= form_for(@room_issue) do |f| %>
+  <% if @room_issue.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@room_issue.errors.count, "error") %> prohibited this room_issue from being saved:</h2>
+
+      <ul>
+      <% @room_issue.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :activityDate %><br>
+    <%= f.datetime_select :activityDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

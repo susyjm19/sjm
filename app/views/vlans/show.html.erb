@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @vlan.name %>
+</p>
+
+<p>
+  <strong>Gateway:</strong>
+  <%= @vlan.gateway %>
+</p>
+
+<p>
+  <strong>Netmask:</strong>
+  <%= @vlan.netMask %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @vlan.tag %>
+</p>
+
+<%= link_to 'Edit', edit_vlan_path(@vlan) %> |
+<%= link_to 'Back', vlans_path %>

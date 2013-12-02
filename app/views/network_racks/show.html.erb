@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @network_rack.brand %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @network_rack.type %>
+</p>
+
+<%= link_to 'Edit', edit_network_rack_path(@network_rack) %> |
+<%= link_to 'Back', network_racks_path %>

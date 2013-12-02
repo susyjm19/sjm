@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @network_device.brand %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @network_device.type %>
+</p>
+
+<%= link_to 'Edit', edit_network_device_path(@network_device) %> |
+<%= link_to 'Back', network_devices_path %>

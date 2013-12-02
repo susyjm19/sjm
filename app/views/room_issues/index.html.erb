@@ -1,0 +1,27 @@
+<h1>Listing room_issues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activitydate</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @room_issues.each do |room_issue| %>
+      <tr>
+        <td><%= room_issue.activityDate %></td>
+        <td><%= link_to 'Show', room_issue %></td>
+        <td><%= link_to 'Edit', edit_room_issue_path(room_issue) %></td>
+        <td><%= link_to 'Destroy', room_issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Room issue', new_room_issue_path %>

@@ -1,0 +1,33 @@
+<h1>Listing oids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Oid</th>
+      <th>Name</th>
+      <th>Message</th>
+      <th>Prioritylevel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @oids.each do |oid| %>
+      <tr>
+        <td><%= oid.oid %></td>
+        <td><%= oid.name %></td>
+        <td><%= oid.message %></td>
+        <td><%= oid.priorityLevel %></td>
+        <td><%= link_to 'Show', oid %></td>
+        <td><%= link_to 'Edit', edit_oid_path(oid) %></td>
+        <td><%= link_to 'Destroy', oid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Oid', new_oid_path %>

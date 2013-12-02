@@ -1,0 +1,17 @@
+<%= form_for(@port_panel) do |f| %>
+  <% if @port_panel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@port_panel.errors.count, "error") %> prohibited this port_panel from being saved:</h2>
+
+      <ul>
+      <% @port_panel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

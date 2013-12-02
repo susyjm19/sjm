@@ -1,0 +1,31 @@
+<h1>Listing panel_models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Numberofport</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panel_models.each do |panel_model| %>
+      <tr>
+        <td><%= panel_model.name %></td>
+        <td><%= panel_model.numberOfPort %></td>
+        <td><%= panel_model.category %></td>
+        <td><%= link_to 'Show', panel_model %></td>
+        <td><%= link_to 'Edit', edit_panel_model_path(panel_model) %></td>
+        <td><%= link_to 'Destroy', panel_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Panel model', new_panel_model_path %>

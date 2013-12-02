@@ -1,0 +1,29 @@
+<h1>Listing network_racks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @network_racks.each do |network_rack| %>
+      <tr>
+        <td><%= network_rack.brand %></td>
+        <td><%= network_rack.type %></td>
+        <td><%= link_to 'Show', network_rack %></td>
+        <td><%= link_to 'Edit', edit_network_rack_path(network_rack) %></td>
+        <td><%= link_to 'Destroy', network_rack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network rack', new_network_rack_path %>

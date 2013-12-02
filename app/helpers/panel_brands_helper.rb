@@ -1,0 +1,2 @@
+module PanelBrandsHelper
+end

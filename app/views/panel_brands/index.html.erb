@@ -1,0 +1,27 @@
+<h1>Listing panel_brands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @panel_brands.each do |panel_brand| %>
+      <tr>
+        <td><%= panel_brand.name %></td>
+        <td><%= link_to 'Show', panel_brand %></td>
+        <td><%= link_to 'Edit', edit_panel_brand_path(panel_brand) %></td>
+        <td><%= link_to 'Destroy', panel_brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Panel brand', new_panel_brand_path %>

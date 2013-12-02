@@ -1,0 +1,29 @@
+<h1>Listing network_devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @network_devices.each do |network_device| %>
+      <tr>
+        <td><%= network_device.brand %></td>
+        <td><%= network_device.type %></td>
+        <td><%= link_to 'Show', network_device %></td>
+        <td><%= link_to 'Edit', edit_network_device_path(network_device) %></td>
+        <td><%= link_to 'Destroy', network_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network device', new_network_device_path %>

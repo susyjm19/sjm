@@ -1,0 +1,27 @@
+<h1>Listing wall_plates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wall_plates.each do |wall_plate| %>
+      <tr>
+        <td><%= wall_plate.number %></td>
+        <td><%= link_to 'Show', wall_plate %></td>
+        <td><%= link_to 'Edit', edit_wall_plate_path(wall_plate) %></td>
+        <td><%= link_to 'Destroy', wall_plate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wall plate', new_wall_plate_path %>

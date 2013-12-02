@@ -1,0 +1,33 @@
+<h1>Listing switch_ports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Macaddress</th>
+      <th>Status</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @switch_ports.each do |switch_port| %>
+      <tr>
+        <td><%= switch_port.name %></td>
+        <td><%= switch_port.macAddress %></td>
+        <td><%= switch_port.status %></td>
+        <td><%= switch_port.description %></td>
+        <td><%= link_to 'Show', switch_port %></td>
+        <td><%= link_to 'Edit', edit_switch_port_path(switch_port) %></td>
+        <td><%= link_to 'Destroy', switch_port, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Switch port', new_switch_port_path %>

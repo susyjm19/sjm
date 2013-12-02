@@ -1,0 +1,17 @@
+<%= form_for(@oid_model) do |f| %>
+  <% if @oid_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@oid_model.errors.count, "error") %> prohibited this oid_model from being saved:</h2>
+
+      <ul>
+      <% @oid_model.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Listing device_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Macaddress</th>
+      <th>Ipaddress</th>
+      <th>Osversion</th>
+      <th>Function</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_details.each do |device_detail| %>
+      <tr>
+        <td><%= device_detail.macAddress %></td>
+        <td><%= device_detail.ipAddress %></td>
+        <td><%= device_detail.osVersion %></td>
+        <td><%= device_detail.function %></td>
+        <td><%= link_to 'Show', device_detail %></td>
+        <td><%= link_to 'Edit', edit_device_detail_path(device_detail) %></td>
+        <td><%= link_to 'Destroy', device_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device detail', new_device_detail_path %>

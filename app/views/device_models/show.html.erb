@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @device_model.model %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @device_model.description %>
+</p>
+
+<p>
+  <strong>Numberofport:</strong>
+  <%= @device_model.numberOfPort %>
+</p>
+
+<%= link_to 'Edit', edit_device_model_path(@device_model) %> |
+<%= link_to 'Back', device_models_path %>

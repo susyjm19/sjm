@@ -1,0 +1,29 @@
+<h1>Listing port_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @port_types.each do |port_type| %>
+      <tr>
+        <td><%= port_type.name %></td>
+        <td><%= port_type.type %></td>
+        <td><%= link_to 'Show', port_type %></td>
+        <td><%= link_to 'Edit', edit_port_type_path(port_type) %></td>
+        <td><%= link_to 'Destroy', port_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Port type', new_port_type_path %>
